@@ -4,13 +4,18 @@ Input: "Java" Output: No
 Input: "123123" Output: Yes
 """
 
-st = "12312323"
+st = "JAVA"
 ln = len(st)
-ln1 = int(ln/2)
-ln2 = int(ln-ln1)
 st1 = ""
 st2 = ""
-for i in range(0,ln1):
+for i in range(0,ln):
   ch = st[i]
-  st1 = st1 + ch
-print(st1)
+  if(i>=int(ln/2)):
+    st1 = st1 + ch
+  elif(i<int(ln/2)):
+    st2 = st2 + ch
+if(st2==st1):
+  print("Yes")
+else:
+  print("No")
+  
